@@ -1,5 +1,4 @@
 $(function(){
-	
 	$('.ascensor').click(function(e){
 		e.preventDefault();
 		$('html, body')
