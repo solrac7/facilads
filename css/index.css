@@ -1,9 +1,61 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
 
+@font-face {
+  font-family: "Flaticon";
+  src: url("../font/Flaticon.eot");
+  src: url("../font/Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("../font/Flaticon.woff") format("woff"),
+       url("../font/Flaticon.ttf") format("truetype"),
+       url("../font/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+  font-size: 22px;
+	font-style: normal;
+	margin-left: 20px;
+	color: white;
+}
+
+.flaticon-keys:before { 
+	content: "\f100";
+	top: 2px;
+	position: relative;
+	left: 8px;
+}
+
+.flaticon-letter:before {
+	content: "\f101";
+  top: 2px;
+  position: relative;
+  left: 8px;
+}
+
+.flaticon-phone:before {
+	content: "\f102";
+	top: 2px;
+	position: relative;
+	left: 8px;
+}
+
 html, body{
 	font-family: 'Open Sans', sans-serif;
 	color: #414141;
 	-webkit-font-smoothing: antialiased;
+}
+
+p{
+	font-family: Arial !important;
 }
 
 ul {
@@ -57,8 +109,14 @@ ul li{
 }
 
 .factura__txt{
-	font-size: 1.2em;
+	font-size: 1em;
 	margin-bottom: 50px;
+}
+
+.flecha::after{
+	content: "";
+	display: absolute;
+
 }
 
 .footer{
@@ -166,6 +224,7 @@ ul li{
 .header__btnComenzar:hover{
 	background-color: white;
 	color: #25B3F2;
+	text-decoration: none !important;
 }
 
 
@@ -175,12 +234,12 @@ ul li{
 
 .header__logo{
 	position: relative;
-	top:12px;
+	top:10px;
 }
 
 .header a, .header a:hover, .header a:visited, .header a:active{
 	outline: none !important;
-	text-decoration: none !important;
+	font-family: Arial, sans-serif;
 }
 
 .header a{
@@ -196,13 +255,12 @@ ul li{
 	        transition: all 0.3s ease;
 }
 
-
 #header__logo:hover{
 	opacity: .5
 }
 
 .header a:hover{
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 .header a:hover::after{
@@ -211,13 +269,14 @@ ul li{
 
 .hero{
 	background-color: #FAFAFA;
-	padding-top: 80px;
+	padding: 100px 0 50px 0;
 }
 
 .hero__title{
-	font-size: 2.5em;
+	font-size: 1.9em;
 	font-weight: 300;
-	margin-bottom: 50px;
+	line-height: 34px;
+	text-align: center;
 }
 
 .hero__title span{
@@ -225,12 +284,14 @@ ul li{
 }
 
 .hero__photo{
+	display: none;
 	position: relative;
 	margin-top: 40px;
 }
 
 .hero__google{
-	margin-right: 15px;
+	margin: 0 auto;
+	display: block;
 	width: 36%;
 	-webkit-box-shadow: -7px 12px 30px -6px rgba(0,0,0,0.17);
 	   -moz-box-shadow: -7px 12px 30px -6px rgba(0,0,0,0.17);
@@ -239,13 +300,15 @@ ul li{
 
 .hero__btn{
 	background-color: #82CC46;
-	width: 150px;
+	width: 90%;
 	padding: 10px;
 	color: white;
 	border: none; 
 	font-weight: 600;
 	border-radius: 5px;
 	outline: none;
+	margin: 30px auto 0 auto;
+	display: block;
 
 	-webkit-box-shadow: -1px 2px 0px 0px rgba(115,155,80,1);
 	   -moz-box-shadow: -1px 2px 0px 0px rgba(115,155,80,1);
@@ -260,9 +323,6 @@ ul li{
 
 .hero__btn:hover{
 	background-color: #25B3F2;
-	
-	-webkit-transform: scale(1.05);
-	        transform: scale(1.05);
 
 	-webkit-box-shadow: -1px 2px 7px 0px rgba(0,0,0,.4);
 	   -moz-box-shadow: -1px 2px 7px 0px rgba(0,0,0,.4);
@@ -384,7 +444,6 @@ ul li{
 	background-color: #FFCA00;
 }
 
-
 .plan__Bg{
 	height: 113px;
 	border-radius: 4px 4px 0 0;
@@ -399,6 +458,7 @@ ul li{
 	color: white; 
 	margin: 0 auto;
 	font-size: 20px;
+	font-family: 'Open Sans', sans-serif !important;
 }
 
 .plan__Plan::before, .plan__Plan::after{
@@ -468,6 +528,7 @@ ul li{
 	font-weight: 600;
   position: relative;
 	top: -8px;
+	font-family: 'Open Sans', sans-serif !important;
 }
 
 .plan__Price span{
@@ -512,11 +573,10 @@ ul li{
 
 
 .plan__btn:hover{
-	/*background-color: #25B3F2;*/
-	-webkit-transform: scale(1.05);
-	        transform: scale(1.05);
+	-webkit-box-shadow: -1px 2px 7px 0px rgba(0,0,0,.4);
+	   -moz-box-shadow: -1px 2px 7px 0px rgba(0,0,0,.4);
+	        box-shadow: -1px 2px 7px 0px rgba(0,0,0,.4);
 }
-
 
 .selectPlan{
 	text-align: center;
@@ -602,6 +662,7 @@ ul li{
 .uds ul li{
 	padding-left: 5.7em;
 	margin-bottom: 2.14em;
+	font-family: Arial, sans-serif !important;
 }
 
 
@@ -623,7 +684,10 @@ ul li{
 
 .woman{
 	display: none;
+
 }
+
+
 
 .u__right{
 	float: right;
@@ -660,6 +724,7 @@ ul li{
 .menu
 {
 	width: 27px;
+	height: 17px;
 	cursor: pointer;
 	position: absolute;
 	z-index: 99999;
@@ -754,26 +819,30 @@ ul li{
             transform: matrix(0.7, -0.7, 0.7, 0.7, 0, -8);
 }
 
-
-
 /* ////////////////////////// TABLET PORTRAIL ////////////////////////// */
 @media (min-width: 768px) {
 
 	.hero{
 		height: 457px;
+		padding: 80px 0 0;
 	}
 
 	.hero__title{
 		font-size: 2.3em;
 		margin-top: 70px;
+		text-align: left;
+		line-height: 50px;
+
 	}
 
 	.hero__photo{
-		bottom: -20px
+		bottom: -20px;
+		display: block;
 	}
 
 	.hero__google{
 		margin-right: 17px;
+		display: inline-block;
 	}
 
 	.uds__title {
@@ -784,6 +853,11 @@ ul li{
 		display: block;
 		margin-top: 24px;
 	}
+
+	.hero__btn{
+		width: 150px;
+		display: inline-block;
+	}
   
 }
 
@@ -791,6 +865,10 @@ ul li{
 
 
 @media (min-width: 992px) {
+
+	.hero__photo{
+		display: block;
+	}
 
 	.menu{
 		display: none;
@@ -867,72 +945,9 @@ ul li{
 		float: right;
 	}
 
-	.header__btnComenzar:hover::after, .header__telefono:hover::after, #header__logo::after{
-		width: 0% !important;
-	}
-
 	.header--right{
 		text-align: right;
 		position: relative;
 	}
 
-	.header__telefono{
-		cursor: default;
-	}
-
-
-	.header__telefono, .header__sesion{
-		margin-left: 50px !important;
-	}
-
-	.header__contacto::before{
-		content: "";
-		position: absolute;
-		left: -35px;
-		top: 30px;
-		width: 28px;
-		height: 18px;
-		background: url(../images/icon-email.svg) left top no-repeat;
-	}
-
-	.header__telefono::before{
-		content: "";
-		position: absolute;
-		left: -27px;
-	  top: 28px;
-	  width: 28px;
-	  height: 24px;
-		background: url(../images/icon-phone.svg) left top no-repeat;
-	}
-
-	.header__sesion::before{
-		content: "";
-		position: absolute;
-		left: -24px;
-		top: 30px;
-		width: 28px;
-		height: 18px;
-		background: url(../images/icon-person.svg) left top no-repeat;
-	}
-
-	.header a::after{
-		content: "";
-		position: relative;
-		width: 0;
-		height: 2px;
-		background-color: white;
-		display: block;
-		bottom: 27px;
-		margin: 0 auto;
-
-		-webkit-transition: all 0.3s ease;
-		   -moz-transition: all 0.3s ease;
-		     -o-transition: all 0.3s ease;
-		    -ms-transition: all 0.3s ease;
-		        transition: all 0.3s ease;
-	}
-
-
-
-  
 }
